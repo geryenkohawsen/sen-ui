@@ -20,8 +20,8 @@ export default function SenUiButton({
     <button
       ref={bp.ref}
       className={cn(
+        'cursor-pointer rounded px-4 py-2 font-bold text-white',
         variantStyles[variant],
-        'rounded px-4 py-2 font-bold text-white',
         bp.className
       )}
       onClick={bp.onClick}
