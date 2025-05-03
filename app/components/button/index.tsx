@@ -5,17 +5,17 @@ interface SenButtonProps {
   variant?: 'primary' | 'secondary' | 'danger' | 'success'
 }
 
+const variantStyles = {
+  primary: cn('bg-blue-500 hover:bg-blue-600'),
+  secondary: cn('bg-gray-500 hover:bg-gray-600'),
+  danger: cn('bg-red-500 hover:bg-red-600'),
+  success: cn('bg-green-500 hover:bg-green-600'),
+}
+
 export default function SenUiButton({
   variant = 'primary',
   ...bp
 }: ComponentPropsWithRef<'button'> & SenButtonProps) {
-  const variantStyles = {
-    primary: cn('bg-blue-500 hover:bg-blue-600'),
-    secondary: cn('bg-gray-500 hover:bg-gray-600'),
-    danger: cn('bg-red-500 hover:bg-red-600'),
-    success: cn('bg-green-500 hover:bg-green-600'),
-  }
-
   return (
     <button
       ref={bp.ref}
