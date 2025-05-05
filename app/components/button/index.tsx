@@ -16,19 +16,19 @@ const variantStyles = {
 
 export default function SenUiButton({
   variant = 'primary',
-  ...bp
+  ...props
 }: ComponentPropsWithRef<'button'> & SenButtonProps) {
   return (
     <button
-      ref={bp.ref}
+      ref={props.ref}
       className={cn(
         'cursor-pointer rounded px-4 py-2 font-bold text-white',
         variantStyles[variant],
-        bp.className
+        props.className
       )}
-      onClick={bp.onClick}
+      onClick={props.onClick}
     >
-      {bp.children}
+      {props.children}
     </button>
   )
 }
