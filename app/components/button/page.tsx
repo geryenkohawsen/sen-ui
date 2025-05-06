@@ -1,5 +1,5 @@
+import { SenButton } from '@/components/ui/SenButton'
 import React from 'react'
-import { SenButton } from '.'
 
 export default function PageButton() {
   async function handleClick() {

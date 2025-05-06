@@ -1,18 +1,7 @@
 'use client'
 
 import { cn } from '@/utils/cn'
-import type { ComponentPropsWithoutRef } from 'react'
-
-export type SenButtonVariant = 'primary' | 'secondary' | 'danger' | 'success'
-export type SenButtonSize = 'sm' | 'md' | 'lg'
-
-// Custom props for SenButton
-interface SenButtonProps {
-  /** Visual style of the button (default: 'primary') */
-  variant?: SenButtonVariant
-  /** Size of the button (default: 'md') */
-  size?: SenButtonSize
-}
+import type { SenButtonProps, SenButtonVariant, SenButtonSize } from './props'
 
 const variantStyles: Record<SenButtonVariant, string> = {
   primary: 'bg-blue-500 hover:bg-blue-600',
@@ -27,15 +16,15 @@ const sizeStyles: Record<SenButtonSize, string> = {
   lg: 'text-lg px-5 py-3',
 }
 
-export function SenButton({
+export default function SenButton({
   // Custom props
   variant = 'primary',
   size = 'md',
-  // Native button props
+  // Native HTML props
   className,
   children,
   ...props
-}: ComponentPropsWithoutRef<'button'> & SenButtonProps) {
+}: SenButtonProps) {
   return (
     <button
       className={cn(
