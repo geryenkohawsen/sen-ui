@@ -1,5 +1,5 @@
 import React from 'react'
-import { SenUiButton } from '.'
+import { SenButton } from '.'
 
 export default function PageButton() {
   async function handleClick() {
@@ -10,16 +10,16 @@ export default function PageButton() {
   return (
     <div className="p-4">
       <h1>Simple Page Showing a Button</h1>
-      <SenUiButton>Click Me</SenUiButton>
-      <SenUiButton variant="secondary" onClick={handleClick}>
+      <SenButton>Click Me</SenButton>
+      <SenButton variant="secondary" onClick={handleClick}>
         Click Me
-      </SenUiButton>
-      <SenUiButton variant="danger" onClick={handleClick}>
+      </SenButton>
+      <SenButton variant="danger" onClick={handleClick}>
         Click Me
-      </SenUiButton>
-      <SenUiButton variant="success" onClick={handleClick}>
+      </SenButton>
+      <SenButton variant="success" onClick={handleClick}>
         Click Me
-      </SenUiButton>
+      </SenButton>
     </div>
   )
 }
