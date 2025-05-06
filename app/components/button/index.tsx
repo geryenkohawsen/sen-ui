@@ -1,13 +1,16 @@
 'use client'
 
 import { cn } from '@/utils/cn'
-import type { ComponentPropsWithRef } from 'react'
+import type { ComponentPropsWithoutRef } from 'react'
 
 export type SenButtonVariant = 'primary' | 'secondary' | 'danger' | 'success'
 export type SenButtonSize = 'sm' | 'md' | 'lg'
 
+// Custom props for SenButton
 interface SenButtonProps {
+  /** Visual style of the button (default: 'primary') */
   variant?: SenButtonVariant
+  /** Size of the button (default: 'md') */
   size?: SenButtonSize
 }
 
@@ -25,22 +28,25 @@ const sizeStyles: Record<SenButtonSize, string> = {
 }
 
 export function SenButton({
+  // Custom props
   variant = 'primary',
   size = 'md',
+  // Native button props
+  className,
+  children,
   ...props
-}: ComponentPropsWithRef<'button'> & SenButtonProps) {
+}: ComponentPropsWithoutRef<'button'> & SenButtonProps) {
   return (
     <button
-      ref={props.ref}
       className={cn(
         'cursor-pointer rounded font-bold text-white transition-colors duration-200',
         variantStyles[variant],
         sizeStyles[size],
-        props.className
+        className
       )}
       {...props}
     >
-      {props.children}
+      {children}
     </button>
   )
 }
