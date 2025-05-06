@@ -2,26 +2,26 @@
 'use client'
 
 import { cn } from '@/utils/cn'
-
-export interface SenSpinnerProps {
-  size?: number // in pixels
-  className?: string
-  srText?: string // screen reader fallback text (defaults to "Loading…")
-}
+import type { ComponentPropsWithoutRef } from 'react'
+import { SenSpinnerProps } from './props'
 
 export default function SenSpinner({
+  // Custom props
   size = 24,
-  className,
   srText = 'Loading…',
-}: SenSpinnerProps) {
+  // Native SVG props
+  className,
+  ...props
+}: SenSpinnerProps & ComponentPropsWithoutRef<'svg'>) {
   return (
-    <div role="status" className="inline-flex items-center justify-center">
+    <div role="status">
       <svg
         className={cn('animate-spin text-gray-500', className)}
         style={{ width: size, height: size }}
         viewBox="0 0 24 24"
         fill="none"
         aria-hidden="true"
+        {...props} // ✅ this is critical
       >
         <circle
           className="opacity-25"
