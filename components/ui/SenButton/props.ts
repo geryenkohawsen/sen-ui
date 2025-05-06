@@ -13,7 +13,7 @@ export interface SenButtonProps extends ComponentPropsWithoutRef<'button'> {
    * @default 'primary'
    * @example
    * ```tsx
-   * <SenButton variant="primary" />
+   * <SenButton variant="danger" />
    * ```
    */
   variant?: SenButtonVariant
@@ -23,8 +23,18 @@ export interface SenButtonProps extends ComponentPropsWithoutRef<'button'> {
    * @default 'md'
    * @example
    * ```tsx
-   * <SenButton size="md" />
+   * <SenButton size="lg" />
    * ```
    */
   size?: SenButtonSize
+
+  /**
+   * Whether the button is in a loading state.
+   * @default false
+   * @example
+   * ```tsx
+   * <SenButton loading />
+   * ```
+   */
+  loading?: boolean
 }

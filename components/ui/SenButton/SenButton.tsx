@@ -1,6 +1,7 @@
 'use client'
 
 import { cn } from '@/utils/cn'
+import { SenSpinner } from '@/components/ui/SenSpinner'
 import type { SenButtonProps, SenButtonVariant, SenButtonSize } from './props'
 
 const variantStyles: Record<SenButtonVariant, string> = {
@@ -17,24 +18,31 @@ const sizeStyles: Record<SenButtonSize, string> = {
 }
 
 export default function SenButton({
-  // Custom props
   variant = 'primary',
   size = 'md',
-  // Native HTML props
+  loading = false,
   className,
   children,
   ...props
 }: SenButtonProps) {
+  const isActuallyDisabled = props.disabled
+  const isButtonDisabled = loading || isActuallyDisabled
+
   return (
     <button
       className={cn(
-        'cursor-pointer rounded font-bold text-white transition-colors duration-200',
+        'inline-flex items-center justify-center gap-2 rounded font-bold text-white transition-colors duration-200',
         variantStyles[variant],
         sizeStyles[size],
+        loading && 'cursor-not-allowed',
+        isActuallyDisabled &&
+          'cursor-not-allowed bg-gray-400 text-gray-700 hover:bg-gray-400',
         className
       )}
+      disabled={isButtonDisabled}
       {...props}
     >
+      {loading && <SenSpinner size={16} srText="Loading…" />}
       {children}
     </button>
   )
