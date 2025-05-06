@@ -1,32 +1,44 @@
 'use client'
 
 import { cn } from '@/utils/cn'
-import { ComponentPropsWithRef } from 'react'
+import type { ComponentPropsWithRef } from 'react'
+
+export type SenButtonVariant = 'primary' | 'secondary' | 'danger' | 'success'
+export type SenButtonSize = 'sm' | 'md' | 'lg'
 
 interface SenButtonProps {
-  variant?: 'primary' | 'secondary' | 'danger' | 'success'
+  variant?: SenButtonVariant
+  size?: SenButtonSize
 }
 
-const variantStyles = {
-  primary: cn('bg-blue-500 hover:bg-blue-600'),
-  secondary: cn('bg-gray-500 hover:bg-gray-600'),
-  danger: cn('bg-red-500 hover:bg-red-600'),
-  success: cn('bg-green-500 hover:bg-green-600'),
+const variantStyles: Record<SenButtonVariant, string> = {
+  primary: 'bg-blue-500 hover:bg-blue-600',
+  secondary: 'bg-gray-500 hover:bg-gray-600',
+  danger: 'bg-red-500 hover:bg-red-600',
+  success: 'bg-green-500 hover:bg-green-600',
+}
+
+const sizeStyles: Record<SenButtonSize, string> = {
+  sm: 'text-sm px-3 py-1.5',
+  md: 'text-base px-4 py-2',
+  lg: 'text-lg px-5 py-3',
 }
 
 export default function SenUiButton({
   variant = 'primary',
+  size = 'md',
   ...props
 }: ComponentPropsWithRef<'button'> & SenButtonProps) {
   return (
     <button
       ref={props.ref}
       className={cn(
-        'cursor-pointer rounded px-4 py-2 font-bold text-white',
+        'cursor-pointer rounded font-bold text-white transition-colors duration-200',
         variantStyles[variant],
+        sizeStyles[size],
         props.className
       )}
-      onClick={props.onClick}
+      {...props}
     >
       {props.children}
     </button>
