@@ -1,24 +1,25 @@
 import React from 'react'
-import CompButton from '.'
+import { SenUiButton } from '.'
 
 export default function PageButton() {
-  const handleClick = () => {
-    alert('Button clicked!')
+  async function handleClick() {
+    'use server'
+    console.log('Button clicked!')
   }
 
   return (
     <div className="p-4">
       <h1>Simple Page Showing a Button</h1>
-      <CompButton>Click Me</CompButton>
-      <CompButton variant="secondary" onClick={handleClick}>
+      <SenUiButton>Click Me</SenUiButton>
+      <SenUiButton variant="secondary" onClick={handleClick}>
         Click Me
-      </CompButton>
-      <CompButton variant="danger" onClick={handleClick}>
+      </SenUiButton>
+      <SenUiButton variant="danger" onClick={handleClick}>
         Click Me
-      </CompButton>
-      <CompButton variant="success" onClick={handleClick}>
+      </SenUiButton>
+      <SenUiButton variant="success" onClick={handleClick}>
         Click Me
-      </CompButton>
+      </SenUiButton>
     </div>
   )
 }

@@ -24,7 +24,7 @@ const sizeStyles: Record<SenButtonSize, string> = {
   lg: 'text-lg px-5 py-3',
 }
 
-export default function SenUiButton({
+export function SenUiButton({
   variant = 'primary',
   size = 'md',
   ...props
