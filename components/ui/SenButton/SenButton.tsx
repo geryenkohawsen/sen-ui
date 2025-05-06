@@ -31,7 +31,7 @@ export default function SenButton({
   return (
     <button
       className={cn(
-        'inline-flex items-center justify-center gap-2 rounded font-bold transition-colors duration-200',
+        'relative inline-flex items-center justify-center gap-2 rounded font-bold transition-colors duration-200',
         variantStyles[variant],
         sizeStyles[size],
         isDisabled && 'cursor-not-allowed',
@@ -41,10 +41,15 @@ export default function SenButton({
       disabled={isDisabled}
       {...props}
     >
+      {/* Spinner overlays */}
       {loading && (
-        <SenSpinner size={16} srText="Loading…" className="text-inherit" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <SenSpinner size={16} srText="Loading…" className="text-inherit" />
+        </div>
       )}
-      {children}
+
+      {/* Children are kept for layout but hidden visually */}
+      <span className={cn(loading && 'opacity-0')}>{children}</span>
     </button>
   )
 }
