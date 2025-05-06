@@ -1,5 +1,6 @@
 import { SenButton } from '@/components/ui/SenButton'
 import { ButtonClickExample } from './ButtonClickExample'
+import { ButtonLoadingExample } from './ButtonLoadingExample'
 
 export default function PageButton() {
   return (
@@ -29,19 +30,8 @@ export default function PageButton() {
 
       {/* Loading State */}
       <section>
-        <h2 className="text-xl font-semibold">Loading State</h2>
-        <div className="flex flex-wrap gap-4">
-          <SenButton loading>Loading Primary</SenButton>
-          <SenButton variant="secondary" loading>
-            Loading Secondary
-          </SenButton>
-          <SenButton variant="danger" loading>
-            Loading Danger
-          </SenButton>
-          <SenButton variant="success" loading>
-            Loading Success
-          </SenButton>
-        </div>
+        <h2 className="text-xl font-semibold">Loading State (on click)</h2>
+        <ButtonLoadingExample />
       </section>
 
       {/* Disabled State */}
