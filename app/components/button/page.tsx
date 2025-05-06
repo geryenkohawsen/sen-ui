@@ -1,25 +1,71 @@
 import { SenButton } from '@/components/ui/SenButton'
-import React from 'react'
+import { ButtonClickExample } from './ButtonClickExample'
 
 export default function PageButton() {
-  async function handleClick() {
-    'use server'
-    console.log('Button clicked!')
-  }
-
   return (
-    <div className="p-4">
-      <h1>Simple Page Showing a Button</h1>
-      <SenButton>Click Me</SenButton>
-      <SenButton variant="secondary" onClick={handleClick}>
-        Click Me
-      </SenButton>
-      <SenButton variant="danger" onClick={handleClick}>
-        Click Me
-      </SenButton>
-      <SenButton variant="success" onClick={handleClick}>
-        Click Me
-      </SenButton>
+    <div className="space-y-8 p-6">
+      <h1 className="text-2xl font-bold">SenButton Component Showcase</h1>
+
+      {/* Variant examples */}
+      <section>
+        <h2 className="text-xl font-semibold">Variants</h2>
+        <div className="flex flex-wrap gap-4">
+          <SenButton>Primary</SenButton>
+          <SenButton variant="secondary">Secondary</SenButton>
+          <SenButton variant="danger">Danger</SenButton>
+          <SenButton variant="success">Success</SenButton>
+        </div>
+      </section>
+
+      {/* Sizes */}
+      <section>
+        <h2 className="text-xl font-semibold">Sizes</h2>
+        <div className="flex flex-wrap gap-4">
+          <SenButton size="sm">Small</SenButton>
+          <SenButton size="md">Medium</SenButton>
+          <SenButton size="lg">Large</SenButton>
+        </div>
+      </section>
+
+      {/* Loading State */}
+      <section>
+        <h2 className="text-xl font-semibold">Loading State</h2>
+        <div className="flex flex-wrap gap-4">
+          <SenButton loading>Loading Primary</SenButton>
+          <SenButton variant="secondary" loading>
+            Loading Secondary
+          </SenButton>
+          <SenButton variant="danger" loading>
+            Loading Danger
+          </SenButton>
+          <SenButton variant="success" loading>
+            Loading Success
+          </SenButton>
+        </div>
+      </section>
+
+      {/* Disabled State */}
+      <section>
+        <h2 className="text-xl font-semibold">Disabled State</h2>
+        <div className="flex flex-wrap gap-4">
+          <SenButton disabled>Disabled Primary</SenButton>
+          <SenButton variant="secondary" disabled>
+            Disabled Secondary
+          </SenButton>
+          <SenButton variant="danger" disabled>
+            Disabled Danger
+          </SenButton>
+          <SenButton variant="success" disabled>
+            Disabled Success
+          </SenButton>
+        </div>
+      </section>
+
+      {/* Interactive Click Example */}
+      <section>
+        <h2 className="text-xl font-semibold">Click Handler Example</h2>
+        <ButtonClickExample />
+      </section>
     </div>
   )
 }
