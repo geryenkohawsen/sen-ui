@@ -9,9 +9,16 @@ import { createJavaScriptRegexEngine } from 'shiki/engine/javascript'
  * TypeScript and JavaScript languages.
  */
 export const highlighter = await createHighlighterCore({
-  themes: [import('@shikijs/themes/nord'), import('@shikijs/themes/dark-plus')],
+  themes: [
+    import('@shikijs/themes/catppuccin-macchiato'),
+    import('@shikijs/themes/dark-plus'),
+    import('@shikijs/themes/one-dark-pro'),
+    import('@shikijs/themes/monokai'),
+  ],
   langs: [
+    import('@shikijs/langs/tsx'),
     import('@shikijs/langs/typescript'),
+    import('@shikijs/langs/jsx'),
     import('@shikijs/langs/javascript'),
   ],
   engine: createJavaScriptRegexEngine(),
