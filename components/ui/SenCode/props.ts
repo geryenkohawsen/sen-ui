@@ -15,22 +15,23 @@ export interface SenCodeProps extends ComponentPropsWithoutRef<'pre'> {
 
   /**
    * The programming language to highlight.
-   * Only preloaded languages (`tsx`, `ts`, `js`) are supported.
-   * @default 'ts'
+   * Only preloaded languages are supported.
+   * @default 'tsx'
    * @example
    * ```tsx
-   * <SenCode code="const a = 1" lang="ts" />
+   * <SenCode code="const a = 1" language="tsx" />
    * ```
    */
-  language?: 'ts' | 'js'
+  language?: 'tsx' | 'jsx' | 'ts' | 'js'
 
   /**
-   * The color theme to use for syntax highlighting.
-   * @default 'nord'
+   * The Shiki theme to use for syntax highlighting.
+   * Must match themes preloaded in the highlighter.
+   * @default 'catppuccin-macchiato'
    * @example
    * ```tsx
-   * <SenCode code="const a = 1" theme="nord" />
+   * <SenCode code="const a = 1" theme="catppuccin-macchiato" />
    * ```
    */
-  theme?: 'nord' | 'dark-plus'
+  theme?: 'catppuccin-macchiato' | 'dark-plus' | 'one-dark-pro' | 'monokai'
 }
