@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <main
           className={cn(
-            'min-h-[100vh] bg-slate-50 text-gray-800',
+            'flex min-h-[100dvh] flex-col bg-slate-50 text-gray-800',
             'dark:bg-gray-800 dark:text-white'
           )}
         >
