@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/utils/cn'
+import { SenHeader } from '@/components/ui/SenHeader'
+import { SenButton } from '@/components/ui/SenButton'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -31,6 +33,16 @@ export default function RootLayout({
           `${geistSans.variable} ${geistMono.variable} antialiased`
         )}
       >
+        <SenHeader
+          logoSrc="/images/sen-ui-logo.png"
+          logoAlt="SenUI Logo"
+          links={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: 'About', href: '/about' },
+          ]}
+          actions={<SenButton variant="primary">Sign In</SenButton>}
+        />
         <main
           className={cn(
             'flex min-h-[100dvh] flex-col bg-slate-50 text-gray-800',
