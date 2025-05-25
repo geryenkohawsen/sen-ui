@@ -38,6 +38,10 @@
     "name": "Geryenko Hawsen",
     "email": "geryenko@gmail.com"
   },
+  "homepage": "https://www.sen-ui.com/",
+  "github": {
+    "url": "https://github.com/geryenkohawsen/sen-ui"
+  },
   "license": "MIT",
   "keywords": [
     "react",
