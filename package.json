@@ -38,5 +38,13 @@
     "name": "Geryenko Hawsen",
     "email": "geryenko@gmail.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "nextjs",
+    "ui",
+    "components",
+    "tailwindcss",
+    "typescript"
+  ]
 }
