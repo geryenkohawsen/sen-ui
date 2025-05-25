@@ -4,6 +4,9 @@
 /public
 /out
 /.next
+/components
+/utils
+/src
 
 # Ignore config and build files
 next.config.*
@@ -33,7 +36,9 @@ next-env.d.ts
 *.tsbuildinfo
 
 # Ignore node_modules (npm does this by default, but explicit is safe)
+/node_modules
 node_modules
+node_modules/
 
 # Ignore anything else not needed in the package
 .vscode

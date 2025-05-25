@@ -5,9 +5,10 @@ export default defineConfig({
   target: 'es2022',
   entry: ['./src/index.ts'],
   dts: true,
-  splitting: true,
+  splitting: false,
   bundle: true,
   minify: true,
   sourcemap: true,
   clean: true,
+  skipNodeModulesBundle: true,
 })
