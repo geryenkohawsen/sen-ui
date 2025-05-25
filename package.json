@@ -1,7 +1,7 @@
 {
-  "name": "sen-ui",
+  "name": "@gery/sen-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -32,5 +32,10 @@
     "shiki": "^3.4.0",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "author": {
+    "name": "Geryenko Hawsen",
+    "email": "geryenko@gmail.com"
+  },
+  "license": "MIT"
 }
