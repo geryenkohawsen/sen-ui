@@ -11,4 +11,8 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   skipNodeModulesBundle: true,
+  esbuildOptions(options) {
+    options.jsx = 'automatic' // use automatic runtime
+    options.jsxImportSource = 'react'
+  },
 })
