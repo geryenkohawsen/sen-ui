@@ -1,4 +1,4 @@
-import { SenIcon } from '@/components/ui/SenIcon'
+import { SenIcon } from "../../../src"
 
 const iconNames = ['check', 'close', 'info', 'warning', 'search'] as const
 const sizes = [16, 24, 32] as const

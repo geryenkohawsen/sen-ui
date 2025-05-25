@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import type { SenIconProps } from './props'
-import { cn } from '@/utils/cn'
+import { cn } from '../../../utils/cn'
 
 export default function SenIcon({
   src,

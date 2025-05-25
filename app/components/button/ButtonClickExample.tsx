@@ -1,6 +1,7 @@
 'use client'
 
-import { SenButton } from '@/components/ui/SenButton'
+import { SenButton } from "../../../src"
+
 
 export function ButtonClickExample() {
   function handleClick() {

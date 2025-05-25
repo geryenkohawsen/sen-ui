@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@/utils/cn'
-import { SenSpinner } from '@/components/ui/SenSpinner'
+import { cn } from '../../../utils/cn'
+import { SenSpinner } from '../SenSpinner'
 import type { SenButtonProps, SenButtonVariant, SenButtonSize } from './props'
 
 const variantStyles: Record<SenButtonVariant, string> = {
