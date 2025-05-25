@@ -3,7 +3,6 @@
 /pages
 /public
 /out
-/dist
 /.next
 
 # Ignore config and build files
