@@ -5,7 +5,6 @@
 /out
 /dist
 /.next
-/utils
 
 # Ignore config and build files
 next.config.*
