@@ -31,6 +31,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "shiki": "^3.4.0",
     "tailwindcss": "^4",
+    "tsup": "^8.5.0",
     "typescript": "^5"
   },
   "author": {
