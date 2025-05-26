@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
     "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -14,13 +19,14 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "incremental": false,
-    "outDir": "./dist",
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  // "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  // "exclude": ["node_modules"],
+  "include": ["src/**/*", "utils/**/*"], // ✨ keep docs out
+  "exclude": ["app/**/*"]
 }
