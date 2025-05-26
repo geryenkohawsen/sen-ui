@@ -7,8 +7,10 @@
 /components
 /utils
 /src
+!dist
 
 # Ignore config and build files
+*.config.*
 next.config.*
 postcss.config.*
 prettier.config.*
