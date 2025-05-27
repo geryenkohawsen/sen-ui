@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { SenHeaderProps } from './props'
-import { cn } from '../../../utils/cn'
+import { cn } from '../../utils/cn'
 
 export default function SenHeader({
   logoSrc,

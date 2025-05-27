@@ -1,4 +1,4 @@
-import { highlighter } from '../../../utils/shiki'
+import { highlighter } from '../../utils/shiki'
 import type { SenCodeProps } from './props'
 import { SenCodeCopyButton } from './SenCodeCopyButton'
 

@@ -3,7 +3,7 @@
 
 import type { ComponentPropsWithoutRef } from 'react'
 import { SenSpinnerProps } from './props'
-import { cn } from '../../../utils/cn'
+import { cn } from '../../utils/cn'
 
 export default function SenSpinner({
   // Custom props
