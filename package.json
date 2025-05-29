@@ -1,28 +1,45 @@
 {
   "name": "@geryenkohawsen/sen-ui",
-  "version": "0.1.7",
-  "description": "open-source, Zen-inspired React + TailwindCSS component library for calm, accessible UIs",
-  "private": false,
-  "main": "./dist/index.js",
+  "version": "0.1.8",
+  "description": "Open-source, Zen-inspired React + Tailwind CSS component library for calm, accessible UIs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./sen-ui.css": "./dist/sen-ui.css",
+    "./*": "./dist/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "engines": {
-    "node": ">=22.14.0",
-    "npm": ">=10.9.0"
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
   },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "bundle": "tsup ./src/index.ts"
+    "build:lib": "tsup && npx @tailwindcss/cli --config tailwind.lib.config.js -i styles/index.css -o dist/sen-ui.css --minify",
+    "prepublishOnly": "npm run build:lib"
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "next": "15.3.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "tailwind-merge": "^3.2.0"
+  },
+  "peerDependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -33,31 +50,30 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "eslint-config-prettier": "^10.1.2",
+    "next": "15.3.1",
+    "postcss": "^8.5.4",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "shiki": "^3.4.0",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.1.8",
     "tsup": "^8.5.0",
     "typescript": "^5"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geryenkohawsen/sen-ui.git"
+    "url": "https://github.com/geryenkohawsen/sen-ui.git"
   },
   "bugs": {
     "url": "https://github.com/geryenkohawsen/sen-ui/issues"
   },
   "homepage": "https://www.sen-ui.com/",
-  "author": {
-    "name": "Geryenko Hawsen",
-    "email": "gery.zarons@gmail.com"
-  },
-  "github": {
-    "url": "https://github.com/geryenkohawsen/sen-ui"
-  },
+  "author": "Geryenko Hawsen <gery.zarons@gmail.com>",
   "license": "MIT",
   "keywords": [
     "react",
@@ -66,5 +82,8 @@
     "components",
     "tailwindcss",
     "typescript"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
