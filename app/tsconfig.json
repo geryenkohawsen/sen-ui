@@ -5,6 +5,6 @@
     "jsx": "react-jsx",
     "isolatedModules": true // Next.js requirement
   },
-  "include": ["**/*"],
+  "include": ["**/*", ".next/types/**/*.ts"],
   "exclude": []
 }
