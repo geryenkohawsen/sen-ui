@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./", // /app is its own root
+    "jsx": "react-jsx",
+    "isolatedModules": true // Next.js requirement
+  },
+  "include": ["**/*"],
+  "exclude": []
+}
