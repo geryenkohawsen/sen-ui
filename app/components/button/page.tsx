@@ -1,4 +1,4 @@
-import { SenButton } from '../../../src'
+import { SenButton } from '@/src'
 import { ButtonClickExample } from './ButtonClickExample'
 import { ButtonLoadingExample } from './ButtonLoadingExample'
 

@@ -1,4 +1,4 @@
-import { SenButton, SenCode, SenHeader } from '../../../src'
+import { SenButton, SenCode, SenHeader } from '@/src'
 
 const codeExample = `
 <SenHeader

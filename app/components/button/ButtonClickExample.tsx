@@ -1,6 +1,6 @@
 'use client'
 
-import { SenButton } from "../../../src"
+import { SenButton } from "@/src"
 
 
 export function ButtonClickExample() {

@@ -1,4 +1,4 @@
-import { SenCode } from "../../../src"
+import { SenCode } from "@/src"
 
 const tsxExample = `
 import { SenButton } from '@/components/ui/SenButton'

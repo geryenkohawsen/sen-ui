@@ -1,10 +1,10 @@
 'use client'
+import { SenCode } from '@/src'
 /* ------------------------------------------------------------------ */
 /*  <TypographyPreviewer> – Client wrapper with shared state          */
 /* ------------------------------------------------------------------ */
 
 import React, { useId, useState } from 'react'
-import { SenCode } from '../../../src'
 
 export function TypographyPreviewer() {
   // Shared sample text state (defaults to classic pangram)

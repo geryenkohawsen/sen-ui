@@ -1,5 +1,5 @@
+import { SenSpinner } from '@/src'
 import React from 'react'
-import { SenSpinner } from '../../../src'
 
 export default function PageSpinner() {
   return (
