@@ -41,7 +41,7 @@ export default function RootLayout({
             { label: 'Blog', href: '/blog' },
             { label: 'About', href: '/about' },
           ]}
-          actions={<SenButton variant="primary">Sign In</SenButton>}
+          actions={<SenButton variant="primary">WIP</SenButton>}
         />
         <main className={cn('flex flex-1 flex-col')}>{children}</main>
         <div className="absolute bottom-0 z-[-999] h-dvh w-dvw bg-[radial-gradient(ellipse_80%_80%_at_50%_140%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
