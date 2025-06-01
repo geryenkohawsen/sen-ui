@@ -33,13 +33,14 @@ export default function RootLayout({
           'text-gray-800 dark:text-white'
         )}
       >
+        {/* TODO: add links to future pages */}
         <SenHeader
           logoSrc="/images/sen-ui-logo.png"
           logoAlt="SenUI Logo"
           links={[
             { label: 'Home', href: '/' },
-            { label: 'Blog', href: '/blog' },
-            { label: 'About', href: '/about' },
+            { label: 'WIP', href: '/' },
+            { label: 'WIP', href: '/' },
           ]}
           actions={<SenButton variant="primary">WIP</SenButton>}
         />
@@ -53,7 +54,7 @@ export default function RootLayout({
             /* radial mask anchored at bottom center */
             '[mask-image:radial-gradient(ellipse_70%_90%_at_50%_135%,#000_70%,transparent_100%)]'
           )}
-        ></div>
+        />
       </body>
     </html>
   )
