@@ -16,7 +16,7 @@ export default function SenHeader({
   return (
     <header
       className={cn(
-        'flex items-center justify-between bg-white px-4 py-3 shadow-md',
+        'flex items-center justify-between border-b border-[#4f4f4f2e] px-4 py-3 shadow-md',
         className
       )}
       {...props}
@@ -36,12 +36,7 @@ export default function SenHeader({
           <ul className="flex gap-6">
             {links.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-gray-700 hover:text-gray-900"
-                >
-                  {link.label}
-                </Link>
+                <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
           </ul>
