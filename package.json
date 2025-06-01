@@ -29,8 +29,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:lib": "tsup && npx @tailwindcss/cli --config tailwind.lib.config.js -i styles/index.css -o dist/sen-ui.css --minify",
-    "prepublishOnly": "npm run build:lib"
+    "bundle": "tsup --tsconfig ./tsconfig.build.json && npx @tailwindcss/cli --config ./tailwind.lib.config.js -i ./styles/index.css -o ./dist/sen-ui.css --minify"
   },
   "dependencies": {
     "clsx": "^2.1.1",
