@@ -9,7 +9,7 @@ const previews = [
 
 export default function ComponentsHomePage() {
   return (
-    <main className="p-6">
+    <>
       <h1 className="mb-4 text-2xl font-bold">📦 Component Previews</h1>
       <ul className="space-y-2">
         {previews.map((comp) => (
@@ -23,6 +23,6 @@ export default function ComponentsHomePage() {
           </li>
         ))}
       </ul>
-    </main>
+    </>
   )
 }
