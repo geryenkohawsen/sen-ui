@@ -1,7 +1,7 @@
 'use client'
 
+import { SenButton } from '@/src'
 import { useState } from 'react'
-import { SenButton } from '@/components/ui/SenButton'
 
 export function ButtonLoadingExample() {
   const [loading, setLoading] = useState(false)

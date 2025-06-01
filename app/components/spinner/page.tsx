@@ -1,4 +1,4 @@
-import { SenSpinner } from '@/components/ui/SenSpinner'
+import { SenSpinner } from '@/src'
 import React from 'react'
 
 export default function PageSpinner() {

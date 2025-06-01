@@ -1,6 +1,4 @@
-import { SenHeader } from '@/components/ui/SenHeader'
-import { SenButton } from '@/components/ui/SenButton'
-import { SenCode } from '@/components/ui/SenCode'
+import { SenButton, SenCode, SenHeader } from '@/src'
 
 const codeExample = `
 <SenHeader

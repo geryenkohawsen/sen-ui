@@ -1,5 +1,5 @@
 'use client'
-import { SenCode } from '@/components/ui/SenCode'
+import { SenCode } from '@/src'
 /* ------------------------------------------------------------------ */
 /*  <TypographyPreviewer> – Client wrapper with shared state          */
 /* ------------------------------------------------------------------ */

@@ -3,10 +3,14 @@
 /pages
 /public
 /out
-/dist
 /.next
+/components
+/utils
+/src
+!dist
 
 # Ignore config and build files
+*.config.*
 next.config.*
 postcss.config.*
 prettier.config.*
@@ -34,7 +38,9 @@ next-env.d.ts
 *.tsbuildinfo
 
 # Ignore node_modules (npm does this by default, but explicit is safe)
+/node_modules
 node_modules
+node_modules/
 
 # Ignore anything else not needed in the package
 .vscode

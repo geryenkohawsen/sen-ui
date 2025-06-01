@@ -1,13 +1,13 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  format: ['esm'],
-  target: 'es2022',
   entry: ['./src/index.ts'],
+  target: 'es2022',
+  format: ['esm'],
   dts: true,
-  splitting: true,
-  bundle: true,
-  minify: true,
+  splitting: false,
   sourcemap: true,
   clean: true,
+  minify: true,
+  external: ['react', 'react-dom', 'next'], // peer deps
 })
