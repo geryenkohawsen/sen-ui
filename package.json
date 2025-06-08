@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "react-hook-form": "^7.58.1",
     "tailwind-merge": "^3.2.0"
   },
   "peerDependencies": {
