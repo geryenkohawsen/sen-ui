@@ -27,7 +27,7 @@ export default function RootLayout({
           logoSrc="/images/sen-ui-logo.png"
           logoAlt="SenUI Logo"
           links={[
-            { label: 'Home', href: '/' },
+            { label: 'Docs', href: '/docs' },
             { label: 'WIP', href: '/' },
             { label: 'WIP', href: '/' },
           ]}
