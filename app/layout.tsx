@@ -28,7 +28,7 @@ export default function RootLayout({
           logoAlt="SenUI Logo"
           links={[
             { label: 'Docs', href: '/docs' },
-            { label: 'WIP', href: '/' },
+            { label: 'Components', href: '/components' },
             { label: 'WIP', href: '/' },
           ]}
           actions={<SenButton variant="primary">WIP</SenButton>}
