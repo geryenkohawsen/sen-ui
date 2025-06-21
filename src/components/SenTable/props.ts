@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 /**
  * Text alignment for each table column
@@ -8,9 +8,9 @@ export type SenTableAlign = 'left' | 'center' | 'right'
 /**
  * A single column definition for the table
  */
-export interface SenTableColumn<T = any> {
+export interface SenTableColumn<TData extends Record<string, unknown>> {
   /** Unique key to access the row's value */
-  key: keyof T
+  key: keyof TData
 
   /** Header label */
   header: string
@@ -23,19 +23,19 @@ export interface SenTableColumn<T = any> {
    * @example
    * (value, row) => <strong>{value}</strong>
    */
-  render?: (value: any, row: T) => React.ReactNode
+  render?: (value: TData[keyof TData], row: TData) => ReactNode
 }
 
 /**
  * Props for the `SenTable` component
  */
-export interface SenTableProps<T = any>
+export interface SenTableProps<TData extends Record<string, unknown>>
   extends HTMLAttributes<HTMLTableElement> {
   /** Column definitions */
-  columns: SenTableColumn<T>[]
+  columns: SenTableColumn<TData>[]
 
   /** Data rows to render */
-  data: T[]
+  data: TData[]
 
   /**
    * Apply zebra striping to table rows
@@ -54,5 +54,5 @@ export interface SenTableProps<T = any>
    * @example
    * (row) => console.log(row.id)
    */
-  onRowClick?: (row: T) => void
+  onRowClick?: (row: TData) => void
 }

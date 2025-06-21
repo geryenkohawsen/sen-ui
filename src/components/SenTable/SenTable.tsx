@@ -3,7 +3,7 @@
 import { cn } from '../../utils/cn'
 import { SenTableProps } from './props'
 
-export default function SenTable({
+export default function SenTable<TData extends Record<string, unknown>>({
   columns,
   data,
   zebra = true,
@@ -11,7 +11,7 @@ export default function SenTable({
   showCheckbox = false,
   className,
   ...props
-}: SenTableProps) {
+}: SenTableProps<TData>) {
   return (
     <div className="overflow-x-auto">
       <table
