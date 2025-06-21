@@ -1,9 +1,15 @@
 'use client'
 
+import React from 'react'
 import { cn } from '../../utils/cn'
 import { SenTableProps } from './props'
 
-export default function SenTable<TData extends Record<string, unknown>>({
+export default function SenTable<
+  TData extends Record<
+    string,
+    string | number | boolean | null | undefined | React.ReactNode
+  >,
+>({
   columns,
   data,
   zebra = true,
@@ -67,24 +73,41 @@ export default function SenTable<TData extends Record<string, unknown>>({
                   {/* Add checkbox integration here */}
                 </td>
               )}
-              {columns.map((col) => (
-                <td
-                  key={String(col.key)}
-                  className={cn('p-3 align-middle', {
-                    'text-left': col.align === 'left',
-                    'text-center': col.align === 'center',
-                    'text-right': col.align === 'right',
-                  })}
-                >
-                  {typeof col.render === 'function'
-                    ? col.render(row[col.key], row)
-                    : row[col.key]}
-                </td>
-              ))}
+              {columns.map((col) => {
+                const cellValue = row[col.key]
+                return (
+                  <td
+                    key={String(col.key)}
+                    className={cn('p-3 align-middle', {
+                      'text-left': col.align === 'left',
+                      'text-center': col.align === 'center',
+                      'text-right': col.align === 'right',
+                    })}
+                  >
+                    {typeof col.render === 'function'
+                      ? col.render(cellValue, row)
+                      : isRenderable(cellValue)
+                        ? cellValue
+                        : String(cellValue)}
+                  </td>
+                )
+              })}
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+  )
+}
+
+// Only renderable values pass
+function isRenderable(value: unknown): value is React.ReactNode {
+  return (
+    typeof value === 'string' ||
+    typeof value === 'number' ||
+    typeof value === 'boolean' ||
+    value === null ||
+    value === undefined ||
+    React.isValidElement(value)
   )
 }
