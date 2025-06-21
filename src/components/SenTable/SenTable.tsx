@@ -30,7 +30,7 @@ export default function SenTable<TData extends Record<string, unknown>>({
             )}
             {columns.map((col) => (
               <th
-                key={col.key}
+                key={String(col.key)}
                 scope="col"
                 className={cn('p-3 font-semibold', {
                   'text-left': col.align === 'left',
