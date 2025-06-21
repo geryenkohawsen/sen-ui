@@ -47,7 +47,7 @@ export default function SenTable<TData extends Record<string, unknown>>({
         <tbody>
           {data.map((row, rowIndex) => (
             <tr
-              key={row.id ?? rowIndex}
+              key={String(rowIndex)}
               tabIndex={onRowClick ? 0 : undefined}
               role={onRowClick ? 'button' : undefined}
               className={cn(
