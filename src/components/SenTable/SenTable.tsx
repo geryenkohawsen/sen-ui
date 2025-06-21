@@ -69,7 +69,7 @@ export default function SenTable<TData extends Record<string, unknown>>({
               )}
               {columns.map((col) => (
                 <td
-                  key={col.key}
+                  key={String(col.key)}
                   className={cn('p-3 align-middle', {
                     'text-left': col.align === 'left',
                     'text-center': col.align === 'center',
