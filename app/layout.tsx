@@ -1,18 +1,7 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { SenButton, SenHeader } from '@/src'
 import { cn } from '@/src/utils/cn'
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
   title: 'sen-ui',
@@ -29,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          `${geistSans.variable} ${geistMono.variable} flex min-h-dvh flex-col bg-neutral-950 antialiased`,
+          `flex min-h-dvh flex-col bg-neutral-950 antialiased`,
           'text-gray-800 dark:text-white'
         )}
       >
