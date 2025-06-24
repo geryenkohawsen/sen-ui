@@ -2,9 +2,14 @@
 import Link from 'next/link'
 
 const previews = [
-  { label: 'Button', path: 'button' }, // maps to SenButton
-  { label: 'Spinner', path: 'spinner' }, // maps to SenSpinner
-  { label: 'Input', path: 'input' }, // maps to SenInput
+  { label: 'Button', path: 'button' },
+  { label: 'Checkbox', path: 'checkbox' },
+  { label: 'Code', path: 'code' },
+  { label: 'Header', path: 'header' },
+  { label: 'Icon', path: 'icon' },
+  { label: 'Radio', path: 'radio' },
+  { label: 'Spinner', path: 'spinner' },
+  { label: 'Typography', path: 'typography' },
 ]
 
 export default function ComponentsHomePage() {
