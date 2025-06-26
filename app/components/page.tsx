@@ -9,6 +9,7 @@ const previews = [
   { label: 'Icon', path: 'icon' },
   { label: 'Radio', path: 'radio' },
   { label: 'Spinner', path: 'spinner' },
+  { label: 'Table', path: 'table' },
   { label: 'Typography', path: 'typography' },
 ]
 
