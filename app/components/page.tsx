@@ -16,7 +16,6 @@ const previews = [
 export default function ComponentsHomePage() {
   return (
     <>
-      <h1 className="mb-4 text-2xl font-bold">📦 Component Previews</h1>
       <ul className="space-y-2">
         {previews.map((comp) => (
           <li key={comp.path}>
