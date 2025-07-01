@@ -21,13 +21,13 @@ export default function ComponentsHomePage() {
           <Link
             key={comp.path}
             href={`/components/${comp.path}`}
-            className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-blue-400 hover:shadow-lg"
+            className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-blue-400 hover:shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:hover:border-blue-500"
           >
-            <span className="flex items-center gap-2 text-lg font-semibold text-gray-800 group-hover:text-blue-600">
+            <span className="flex items-center gap-2 text-lg font-semibold text-gray-800 group-hover:text-blue-600 dark:text-gray-100 dark:group-hover:text-blue-400">
               {/* Optionally add an icon here */}
               {comp.label}
               <svg
-                className="h-4 w-4 text-blue-400 transition group-hover:text-blue-600"
+                className="h-4 w-4 text-blue-400 transition group-hover:text-blue-600 dark:text-blue-500 dark:group-hover:text-blue-400"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -40,7 +40,7 @@ export default function ComponentsHomePage() {
                 />
               </svg>
             </span>
-            <span className="mt-2 block text-sm text-gray-500">
+            <span className="mt-2 block text-sm text-gray-500 dark:text-gray-400">
               Preview the {comp.label} component
             </span>
           </Link>
