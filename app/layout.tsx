@@ -29,7 +29,7 @@ export default function RootLayout({
           links={[
             { label: 'Docs', href: '/docs' },
             { label: 'Components', href: '/components' },
-            { label: 'WIP', href: '/' },
+            { label: 'Blocks', href: '/blocks' },
           ]}
           actions={<SenButton variant="primary">WIP</SenButton>}
         />
