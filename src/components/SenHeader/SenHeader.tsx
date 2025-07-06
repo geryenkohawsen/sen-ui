@@ -19,14 +19,16 @@ export default function SenHeader({
       {...props}
     >
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
-        {/* Logo */}
-        <Image
-          src={logoSrc}
-          alt={logoAlt}
-          width={882}
-          height={436}
-          className="h-10 w-auto cursor-pointer"
-        />
+        {/* Logo (clickable, links to home) */}
+        <Link href="/" aria-label="Go to homepage">
+          <Image
+            src={logoSrc}
+            alt={logoAlt}
+            width={882}
+            height={436}
+            className="h-10 w-auto cursor-pointer"
+          />
+        </Link>
 
         {/* Navigation */}
         {links.length > 0 && (
