@@ -36,7 +36,12 @@ export default function SenHeader({
             <ul className="flex gap-6">
               {links.map((link, idx) => (
                 <li key={link.href + link.label + idx} className="text-sm">
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link
+                    href={link.href}
+                    className="cursor-pointer text-gray-700 underline-offset-4 transition-colors hover:text-blue-600 hover:underline focus-visible:text-blue-600 focus-visible:underline dark:text-gray-200 dark:hover:text-blue-400"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
