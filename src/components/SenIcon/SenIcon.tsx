@@ -21,7 +21,7 @@ export default function SenIcon({
         alt=""
         width={size}
         height={size}
-        className="object-contain"
+        className="object-contain invert-0 filter dark:invert"
       />
     </span>
   )
