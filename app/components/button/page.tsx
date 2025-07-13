@@ -1,4 +1,4 @@
-import { SenButton } from '@/components/ui/SenButton'
+import { SenButton } from '@/src'
 import { ButtonClickExample } from './ButtonClickExample'
 import { ButtonLoadingExample } from './ButtonLoadingExample'
 

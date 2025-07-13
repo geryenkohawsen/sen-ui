@@ -1,12 +1,17 @@
-
 export default function PageTop() {
   return (
-    <div className="flex h-[100dvh] flex-col items-center justify-center gap-6 p-6">
-      <div className="overflow-hidden">
-        <p className="animate-pulse bg-gradient-to-r from-[#4eb2cb] via-[#2f89a4] to-[#22667f] bg-clip-text text-center text-9xl font-extrabold tracking-wide text-ellipsis text-transparent">
-          WIP WIP WIP
-        </p>
-      </div>
+    <div className="m-auto">
+      <p className="flex flex-col gap-8 text-9xl font-extrabold text-slate-100/95 lg:flex-row">
+        <span className="animate-slidein opacity-0 [--slidein-delay:300ms]">
+          WIP
+        </span>
+        <span className="animate-slidein opacity-0 [--slidein-delay:500ms]">
+          WIP
+        </span>
+        <span className="animate-slidein opacity-0 [--slidein-delay:700ms]">
+          WIP
+        </span>
+      </p>
     </div>
   )
 }

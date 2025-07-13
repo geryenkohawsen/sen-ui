@@ -1,0 +1,49 @@
+# Ignore Next.js app and documentation pages
+/app
+/pages
+/public
+/out
+/.next
+/components
+/utils
+/src
+!dist
+
+# Ignore config and build files
+*.config.*
+next.config.*
+postcss.config.*
+prettier.config.*
+eslint.config.*
+tsup.config.*
+tsconfig.json
+package-lock.json
+bun.lockb
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore test and coverage
+__tests__/
+coverage/
+*.test.*
+*.spec.*
+
+# Ignore misc files
+*.md
+LICENSE
+README.md
+
+# Ignore TypeScript environment and build artifacts
+next-env.d.ts
+*.tsbuildinfo
+
+# Ignore node_modules (npm does this by default, but explicit is safe)
+/node_modules
+node_modules
+node_modules/
+
+# Ignore anything else not needed in the package
+.vscode
+.vercel
+.DS_Store
+.env*

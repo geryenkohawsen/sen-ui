@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@/utils/cn'
-import { SenSpinner } from '@/components/ui/SenSpinner'
+import { cn } from '../../utils/cn'
+import { SenSpinner } from '../SenSpinner'
 import type { SenButtonProps, SenButtonVariant, SenButtonSize } from './props'
 
 const variantStyles: Record<SenButtonVariant, string> = {
@@ -31,7 +31,7 @@ export default function SenButton({
   return (
     <button
       className={cn(
-        'relative inline-flex items-center justify-center gap-2 rounded font-bold transition-colors duration-200',
+        'relative inline-flex cursor-pointer items-center justify-center gap-2 rounded font-bold transition-colors duration-150',
         variantStyles[variant],
         sizeStyles[size],
         isDisabled && 'cursor-not-allowed',
