@@ -32,15 +32,26 @@ export default function RootLayout({
             { label: 'Blocks', href: '/blocks' },
           ]}
           actions={
-            <a
-              href="https://github.com/geryenkohawsen/sen-ui"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Repository"
-              className="inline-flex items-center justify-center rounded-full p-2 transition hover:bg-gray-200 dark:hover:bg-gray-800"
-            >
-              <SenIcon src="/icons/github.svg" size={24} />
-            </a>
+            <div className="flex items-center gap-2">
+              <a
+                href="https://github.com/geryenkohawsen/sen-ui"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Repository"
+                className="inline-flex items-center justify-center rounded-full p-2 transition hover:bg-gray-200 dark:hover:bg-gray-800"
+              >
+                <SenIcon src="/icons/github.svg" size={24} />
+              </a>
+              <a
+                href="https://www.gery.jp/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Portfolio Website"
+                className="inline-flex items-center justify-center rounded-full p-2 transition hover:bg-gray-200 dark:hover:bg-gray-800"
+              >
+                <SenIcon src="/icons/portfolio.svg" size={24} />
+              </a>
+            </div>
           }
         />
         <main className={cn('flex flex-1 flex-col')}>{children}</main>
