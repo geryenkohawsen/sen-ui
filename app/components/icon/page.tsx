@@ -1,6 +1,6 @@
 import { SenIcon } from '@/src'
 
-const iconNames = ['check', 'close', 'info', 'warning', 'search', 'github'] as const
+const iconNames = ['check', 'close', 'info', 'warning', 'search', 'github', 'portfolio'] as const
 const sizes = [16, 24, 32] as const
 
 export default function PageIcon() {
