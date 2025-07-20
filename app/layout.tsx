@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { SenButton, SenHeader, SenIcon } from '@/src'
+import { SenHeader, SenIcon } from '@/src'
 import { cn } from '@/src/utils/cn'
 
 export const metadata: Metadata = {
