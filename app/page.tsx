@@ -37,7 +37,7 @@ export default function PageTop() {
         {/* Primary call-to-action */}
         <SenButton variant="primary" size="lg" className="group">
           <Link
-            href="https://github.com/geryz/sen-ui"
+            href="https://github.com/geryenkohawsen/sen-ui"
             aria-label="Visit Sen UI GitHub repository"
           >
             Follow progress on GitHub
