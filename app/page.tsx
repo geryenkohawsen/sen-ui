@@ -39,6 +39,8 @@ export default function PageTop() {
           <Link
             href="https://github.com/geryenkohawsen/sen-ui"
             aria-label="Visit Sen UI GitHub repository"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Follow progress on GitHub
           </Link>
