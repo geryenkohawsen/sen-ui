@@ -1,4 +1,4 @@
-import { SenButton } from '@/src'
+import { SenButton, SenCode } from '@/src'
 import { ButtonClickExample } from './ButtonClickExample'
 import { ButtonLoadingExample } from './ButtonLoadingExample'
 
@@ -98,9 +98,8 @@ export default function PageButton() {
             </li>
           </ul>
         </div>
-        <pre className="overflow-x-auto rounded bg-slate-900 p-4 text-xs text-slate-100">
-          <code>{String.raw`
-import React from 'react';
+        <SenCode
+          code={`import React from 'react';
 
 export type SenButtonVariant = 'primary' | 'secondary' | 'danger' | 'success';
 export type SenButtonSize = 'sm' | 'md' | 'lg';
@@ -160,8 +159,9 @@ export function SenButton({
     </button>
   );
 }
-`}</code>
-        </pre>
+`}
+          language="tsx"
+        />
         <p className="mt-2 text-xs text-slate-400">
           You can customize the styles, props, or loading spinner as needed for
           your project.
