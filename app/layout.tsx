@@ -54,17 +54,24 @@ export default function RootLayout({
             </div>
           }
         />
-        <main className={cn('flex flex-1 flex-col')}>{children}</main>
-        <div className="absolute bottom-0 z-[-999] h-dvh w-dvw bg-[radial-gradient(ellipse_80%_80%_at_50%_140%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+        {/* Background visuals (fixed, always visible) */}
+        <div className="pointer-events-none fixed inset-0 z-[-999] h-dvh w-dvw bg-[radial-gradient(ellipse_80%_80%_at_50%_140%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
         <div
           className={cn(
-            'absolute right-0 bottom-0 left-0 z-[-998] h-[50vh]',
-            /* horizontal + vertical grid lines (24px × 32px tiles) */
+            'fixed right-0 bottom-0 left-0 z-[-998] h-[50vh]',
             'bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_32px]',
-            /* radial mask anchored at bottom center */
-            '[mask-image:radial-gradient(ellipse_70%_90%_at_50%_135%,#000_70%,transparent_100%)]'
+            '[mask-image:radial-gradient(ellipse_70%_90%_at_50%_135%,#000_70%,transparent_100%)]',
+            'pointer-events-none'
           )}
         />
+        <main
+          className={cn(
+            'flex min-h-0 flex-1 flex-col overflow-y-auto',
+            'relative z-0'
+          )}
+        >
+          {children}
+        </main>
       </body>
     </html>
   )
