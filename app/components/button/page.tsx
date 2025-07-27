@@ -161,6 +161,7 @@ export function SenButton({
 }
 `}
           language="tsx"
+          maxHeight="340px"
         />
         <p className="mt-2 text-xs text-slate-400">
           You can customize the styles, props, or loading spinner as needed for
