@@ -6,6 +6,8 @@ export default async function SenCode({
   code,
   language = 'tsx',
   theme = 'catppuccin-macchiato',
+  maxHeight,
+  ...rest
 }: SenCodeProps) {
   const highlighted = await highlighter.codeToHtml(code, {
     lang: language,
@@ -13,7 +15,10 @@ export default async function SenCode({
   })
 
   return (
-    <div className="relative overflow-auto rounded bg-gray-900 p-4 text-sm text-white">
+    <div
+      className="relative overflow-auto rounded bg-gray-900 p-4 text-sm text-white"
+      style={maxHeight ? { maxHeight, ...rest.style } : rest.style}
+    >
       <SenCodeCopyButton code={code} />
       <div
         className="[&_.line]:block [&_.line]:px-2 [&_.line]:py-0.5"
