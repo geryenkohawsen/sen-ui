@@ -16,12 +16,15 @@ export default async function SenCode({
 
   return (
     <div
-      className="relative overflow-auto rounded bg-gray-900 p-4 text-sm text-white"
-      style={maxHeight ? { maxHeight, ...rest.style } : rest.style}
+      className="relative rounded bg-gray-900 p-4 text-sm text-white"
+      style={rest.style}
     >
-      <SenCodeCopyButton code={code} />
+      <div className="absolute top-2 right-2 z-10">
+        <SenCodeCopyButton code={code} />
+      </div>
       <div
-        className="[&_.line]:block [&_.line]:px-2 [&_.line]:py-0.5"
+        className="overflow-auto [&_.line]:block [&_.line]:px-2 [&_.line]:py-0.5"
+        style={maxHeight ? { maxHeight, minHeight: '2rem' } : undefined}
         dangerouslySetInnerHTML={{ __html: highlighted }}
       />
     </div>
