@@ -22,10 +22,13 @@ export default function RootLayout({
           'text-gray-800 dark:text-white'
         )}
       >
-        {/* TODO: add links to future pages */}
         <SenHeader
           logoSrc="/images/sen-ui-logo.png"
           logoAlt="SenUI Logo"
+          className={cn(
+            'sticky top-3 z-50 mx-auto mt-3 w-[calc(100%-1.5rem)] max-w-6xl',
+            'rounded-full border border-white/10 bg-neutral-950/72 shadow-2xl shadow-black/30 backdrop-blur-2xl'
+          )}
           links={[
             { label: 'Docs', href: '/docs' },
             { label: 'Components', href: '/components' },
@@ -64,14 +67,14 @@ export default function RootLayout({
             'pointer-events-none'
           )}
         />
-        <main
+        <div
           className={cn(
             'flex min-h-0 flex-1 flex-col overflow-y-auto',
             'relative z-0'
           )}
         >
           {children}
-        </main>
+        </div>
       </body>
     </html>
   )

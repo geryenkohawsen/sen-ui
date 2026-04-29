@@ -32,7 +32,9 @@
     "bundle": "tsup --tsconfig ./tsconfig.build.json && npx @tailwindcss/cli --config ./tailwind.config.ts -i ./styles/index.css -o ./dist/sen-ui.css --minify"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "clsx": "^2.1.1",
+    "gsap": "^3.15.0",
     "react-hook-form": "^7.58.1",
     "tailwind-merge": "^3.2.0"
   },

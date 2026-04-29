@@ -26,14 +26,14 @@ export default function SenHeader({
             alt={logoAlt}
             width={882}
             height={436}
-            className="h-10 w-auto cursor-pointer"
+            className="h-9 w-auto cursor-pointer sm:h-10"
           />
         </Link>
 
         {/* Navigation */}
         {links.length > 0 && (
-          <nav aria-label="Main navigation">
-            <ul className="flex gap-6">
+          <nav aria-label="Main navigation" className="hidden sm:block">
+            <ul className="flex gap-4 md:gap-6">
               {links.map((link, idx) => (
                 <li key={link.href + link.label + idx} className="text-sm">
                   <Link
@@ -49,7 +49,9 @@ export default function SenHeader({
         )}
 
         {/* Actions */}
-        {actions && <div className="flex items-center gap-2">{actions}</div>}
+        {actions && (
+          <div className="flex items-center gap-1 sm:gap-2">{actions}</div>
+        )}
       </div>
     </header>
   )
