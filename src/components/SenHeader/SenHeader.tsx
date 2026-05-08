@@ -19,22 +19,29 @@ export default function SenHeader({
       {...props}
     >
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
-        {/* Logo */}
-        <Image
-          src={logoSrc}
-          alt={logoAlt}
-          width={882}
-          height={436}
-          className="h-10 w-auto cursor-pointer"
-        />
+        {/* Logo (clickable, links to home) */}
+        <Link href="/" aria-label="Go to homepage">
+          <Image
+            src={logoSrc}
+            alt={logoAlt}
+            width={882}
+            height={436}
+            className="h-9 w-auto cursor-pointer sm:h-10"
+          />
+        </Link>
 
         {/* Navigation */}
         {links.length > 0 && (
-          <nav aria-label="Main navigation">
-            <ul className="flex gap-6">
+          <nav aria-label="Main navigation" className="hidden sm:block">
+            <ul className="flex gap-4 md:gap-6">
               {links.map((link, idx) => (
                 <li key={link.href + link.label + idx} className="text-sm">
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link
+                    href={link.href}
+                    className="cursor-pointer text-gray-700 underline-offset-4 transition-colors hover:text-blue-600 hover:underline focus-visible:text-blue-600 focus-visible:underline dark:text-gray-200 dark:hover:text-blue-400"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -42,7 +49,9 @@ export default function SenHeader({
         )}
 
         {/* Actions */}
-        {actions && <div className="flex items-center gap-2">{actions}</div>}
+        {actions && (
+          <div className="flex items-center gap-1 sm:gap-2">{actions}</div>
+        )}
       </div>
     </header>
   )

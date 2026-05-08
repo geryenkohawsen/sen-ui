@@ -34,4 +34,9 @@ export interface SenCodeProps extends ComponentPropsWithoutRef<'pre'> {
    * ```
    */
   theme?: 'catppuccin-macchiato' | 'dark-plus' | 'one-dark-pro' | 'monokai'
+
+  /**
+   * Maximum height for the code block (e.g. '300px', '20rem'). If set, code block becomes scrollable.
+   */
+  maxHeight?: string
 }
