@@ -2,8 +2,15 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import type { SenHeaderProps } from './props'
 import { cn } from '../../utils/cn'
+
+function isActiveLink(pathname: string | null, href: string) {
+  if (!pathname) return false
+  if (href === '/') return pathname === '/'
+  return pathname === href || pathname.startsWith(`${href}/`)
+}
 
 export default function SenHeader({
   logoSrc,
@@ -13,44 +20,70 @@ export default function SenHeader({
   className,
   ...props
 }: SenHeaderProps) {
+  const pathname = usePathname()
+
   return (
     <header
-      className={cn('border-b border-[#4f4f4f2e] shadow-md', className)}
+      className={cn(
+        'relative isolate',
+        'before:pointer-events-none before:absolute before:inset-x-6 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:opacity-60',
+        className
+      )}
       {...props}
     >
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
-        {/* Logo (clickable, links to home) */}
-        <Link href="/" aria-label="Go to homepage">
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-3 sm:px-6">
+        <Link
+          href="/"
+          aria-label="Go to homepage"
+          className="group flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-0 rounded-full"
+        >
           <Image
             src={logoSrc}
             alt={logoAlt}
             width={882}
             height={436}
-            className="h-9 w-auto cursor-pointer sm:h-10"
+            className="h-9 w-auto cursor-pointer transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:h-10"
           />
         </Link>
 
-        {/* Navigation */}
         {links.length > 0 && (
           <nav aria-label="Main navigation" className="hidden sm:block">
-            <ul className="flex gap-4 md:gap-6">
-              {links.map((link, idx) => (
-                <li key={link.href + link.label + idx} className="text-sm">
-                  <Link
-                    href={link.href}
-                    className="cursor-pointer text-gray-700 underline-offset-4 transition-colors hover:text-blue-600 hover:underline focus-visible:text-blue-600 focus-visible:underline dark:text-gray-200 dark:hover:text-blue-400"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <ul className="flex items-center gap-1 md:gap-2">
+              {links.map((link, idx) => {
+                const active = isActiveLink(pathname, link.href)
+                return (
+                  <li key={link.href + link.label + idx}>
+                    <Link
+                      href={link.href}
+                      aria-current={active ? 'page' : undefined}
+                      className={cn(
+                        'group relative inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium tracking-tight transition-colors duration-300 outline-none',
+                        'focus-visible:ring-2 focus-visible:ring-white/40',
+                        active
+                          ? 'text-gray-900 dark:text-white'
+                          : 'text-gray-600 hover:text-gray-900 dark:text-white/65 dark:hover:text-white'
+                      )}
+                    >
+                      <span
+                        aria-hidden
+                        className={cn(
+                          'h-1 w-1 rounded-full transition-all duration-300',
+                          active
+                            ? 'bg-lime-300 shadow-[0_0_10px_rgba(190,242,100,0.85)]'
+                            : 'scale-0 bg-current opacity-0 group-hover:scale-100 group-hover:opacity-60'
+                        )}
+                      />
+                      <span>{link.label}</span>
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
         )}
 
-        {/* Actions */}
         {actions && (
-          <div className="flex items-center gap-1 sm:gap-2">{actions}</div>
+          <div className="flex items-center gap-1 sm:gap-1.5">{actions}</div>
         )}
       </div>
     </header>

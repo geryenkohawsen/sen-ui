@@ -176,7 +176,7 @@ export default function LandingPage() {
   return (
     <main
       ref={rootRef}
-      className="w-full max-w-full overflow-x-hidden bg-[#060606] [font-family:Geist,ui-sans-serif,system-ui,sans-serif] text-white"
+      className="w-full max-w-full overflow-x-hidden [font-family:Geist,ui-sans-serif,system-ui,sans-serif] text-white"
     >
       <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden px-4 pt-28 pb-24 sm:px-6 lg:px-8">
         <div
@@ -186,8 +186,7 @@ export default function LandingPage() {
               'url(https://picsum.photos/seed/sen-hero/1920/1080)',
           }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_22%,rgba(157,173,135,0.24),transparent_32%),radial-gradient(circle_at_78%_70%,rgba(255,255,255,0.12),transparent_28%),linear-gradient(115deg,#060606_0%,rgba(6,6,6,0.82)_52%,rgba(6,6,6,0.58)_100%)]" />
-        <div className="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:44px_44px] opacity-[0.18]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_22%,rgba(157,173,135,0.22),transparent_38%),radial-gradient(circle_at_78%_70%,rgba(255,255,255,0.10),transparent_32%)]" />
 
         <div className="hero-copy relative z-10 mx-auto flex min-h-[64vh] w-full max-w-7xl flex-col justify-center">
           <h1 className="max-w-6xl text-[clamp(3.2rem,6vw,6.5rem)] leading-[0.94] font-black tracking-normal text-balance">
