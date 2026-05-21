@@ -1,3 +1,4 @@
+'use client'
 import { SenCode } from '@/src'
 import SenTable from '@/src/components/SenTable/SenTable'
 import type { SenTableColumn } from '@/src/components/SenTable/props'

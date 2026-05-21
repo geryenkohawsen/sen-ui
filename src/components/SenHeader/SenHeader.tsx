@@ -26,7 +26,7 @@ export default function SenHeader({
     <header
       className={cn(
         'relative isolate',
-        'before:pointer-events-none before:absolute before:inset-x-6 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:opacity-60',
+        'before:pointer-events-none before:absolute before:inset-x-6 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[#141914]/12 before:to-transparent before:opacity-60 dark:before:via-white/30',
         className
       )}
       {...props}
@@ -35,7 +35,7 @@ export default function SenHeader({
         <Link
           href="/"
           aria-label="Go to homepage"
-          className="group flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-0 rounded-full"
+          className="group flex items-center gap-2 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-0"
         >
           <Image
             src={logoSrc}
