@@ -77,13 +77,13 @@ const props = [
 
 export default function PageButton() {
   return (
-    <main className="w-full max-w-full overflow-x-hidden px-4 py-16 text-white sm:px-6 lg:px-8">
+    <main className="w-full max-w-full overflow-x-hidden px-4 py-16 sm:px-6 lg:px-8">
       <section className="mx-auto grid max-w-7xl gap-10 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-24">
         <div>
           <h1 className="max-w-6xl text-[clamp(2.8rem,6vw,5.9rem)] leading-[0.94] font-black tracking-normal text-balance">
             Buttons with simple choices and obvious intent.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-site-muted">
             SenButton keeps the interaction vocabulary compact: variants, sizes,
             disabled state, and loading state. That restraint makes product
             flows easier to scan and harder to misuse.
@@ -96,12 +96,12 @@ export default function PageButton() {
           </div>
         </div>
 
-        <div className="group relative min-h-[30rem] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40">
+        <div className="group relative min-h-[30rem] overflow-hidden rounded-[2rem] border border-site-line bg-site-primary shadow-2xl shadow-site-ink/20">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-90 mix-blend-luminosity transition-transform duration-700 ease-out group-hover:scale-105"
             style={{ backgroundImage: `url(${simplicityImage})` }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(0,0,0,0.08),rgba(0,0,0,0.8))]" />
+          <div className="absolute inset-0 bg-linear-to-b from-site-ink/85 via-site-ink/35 to-site-ink/55" />
           <div className="relative z-10 flex h-full flex-col justify-end p-7">
             <p className="max-w-sm text-2xl leading-tight font-black text-white">
               A clear surface, a clear next step, no extra decoration.
@@ -111,9 +111,9 @@ export default function PageButton() {
       </section>
 
       <section className="mx-auto grid max-w-7xl grid-flow-dense gap-4 py-16 md:grid-cols-6 md:py-24">
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/30 md:col-span-3">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/15 md:col-span-3">
           <h2 className="text-2xl font-black tracking-normal">Variants</h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             Four tones cover the most common product decisions without creating
             a sprawling button taxonomy.
           </p>
@@ -125,7 +125,7 @@ export default function PageButton() {
           </div>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-lime-200 p-7 text-neutral-950 shadow-2xl shadow-black/30 md:col-span-3">
+        <article className="rounded-[2rem] border border-site-line bg-site-accent p-7 text-neutral-950 shadow-2xl shadow-site-ink/15 md:col-span-3">
           <h2 className="text-2xl font-black tracking-normal">Sizes</h2>
           <p className="mt-3 text-sm leading-6 text-neutral-700">
             Size maps to density. Use small inside compact toolbars, medium for
@@ -138,9 +138,9 @@ export default function PageButton() {
           </div>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20 md:col-span-2">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10 md:col-span-2">
           <h2 className="text-2xl font-black tracking-normal">Loading</h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             Preserve layout while the action is in progress.
           </p>
           <div className="mt-7">
@@ -148,9 +148,9 @@ export default function PageButton() {
           </div>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20 md:col-span-2">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10 md:col-span-2">
           <h2 className="text-2xl font-black tracking-normal">Disabled</h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             Keep unavailable actions visible without inviting interaction.
           </p>
           <div className="mt-7 flex flex-wrap gap-4">
@@ -167,9 +167,9 @@ export default function PageButton() {
           </div>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20 md:col-span-2">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10 md:col-span-2">
           <h2 className="text-2xl font-black tracking-normal">Click handler</h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             Native button props pass through for normal React event handling.
           </p>
           <div className="mt-7">
@@ -179,21 +179,21 @@ export default function PageButton() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-4 py-16 md:grid-cols-[0.86fr_1.14fr] md:py-24">
-        <aside className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20">
+        <aside className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10">
           <h2 className="text-2xl font-black tracking-normal">
             Standalone requirements
           </h2>
-          <p className="mt-4 text-sm leading-6 text-white/58">
+          <p className="mt-4 text-sm leading-6 text-site-muted">
             Copy the component into another project when you want the behavior
             without installing the full library.
           </p>
 
           <div className="mt-8 space-y-5">
             <div>
-              <h3 className="text-sm font-black tracking-[0.2em] text-white/42 uppercase">
+              <h3 className="text-sm font-black tracking-[0.2em] text-site-muted uppercase">
                 Dependencies
               </h3>
-              <ul className="mt-3 space-y-2 text-sm leading-6 text-white/68">
+              <ul className="mt-3 space-y-2 text-sm leading-6 text-site-muted">
                 <li>React 18 or newer</li>
                 <li>Tailwind CSS classes or equivalent styles</li>
                 <li>TypeScript for the exported prop types</li>
@@ -201,17 +201,17 @@ export default function PageButton() {
             </div>
 
             <div>
-              <h3 className="text-sm font-black tracking-[0.2em] text-white/42 uppercase">
+              <h3 className="text-sm font-black tracking-[0.2em] text-site-muted uppercase">
                 Props
               </h3>
               <dl className="mt-3 space-y-3">
                 {props.map(([name, value]) => (
                   <div
                     key={name}
-                    className="rounded-2xl border border-white/10 bg-black/20 p-4"
+                    className="rounded-2xl border border-site-line bg-site-canvas p-4"
                   >
-                    <dt className="font-mono text-xs text-lime-200">{name}</dt>
-                    <dd className="mt-1 text-sm text-white/68">{value}</dd>
+                    <dt className="font-mono text-xs text-site-link">{name}</dt>
+                    <dd className="mt-1 text-sm text-site-muted">{value}</dd>
                   </div>
                 ))}
               </dl>
@@ -219,12 +219,12 @@ export default function PageButton() {
           </div>
         </aside>
 
-        <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/30">
-          <div className="border-b border-white/10 p-7">
+        <article className="overflow-hidden rounded-[2rem] border border-site-line bg-site-secondary shadow-2xl shadow-site-ink/15">
+          <div className="border-b border-site-line p-7">
             <h2 className="text-2xl font-black tracking-normal">
               Use SenButton standalone
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/58">
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-site-muted">
               This is the full portable implementation, including variants,
               sizes, loading state, disabled handling, and native button prop
               passthrough.

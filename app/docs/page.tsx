@@ -9,7 +9,7 @@ export default function DocsPage() {
   return (
     <main className="mx-auto w-full max-w-2xl px-4 py-12">
       <h1 className="mb-4 text-3xl font-bold">📚 Getting Started</h1>
-      <p className="mb-6 text-gray-600">
+      <p className="mb-6 text-site-muted">
         Install <b>@geryenkohawsen/sen-ui</b> using your favorite package
         manager:
       </p>
@@ -21,14 +21,14 @@ export default function DocsPage() {
               role="region"
               aria-label={`${manager} install command`}
               tabIndex={0}
-              className="mt-1 overflow-x-auto rounded bg-gray-100 p-3 text-sm text-gray-900 dark:bg-gray-900 dark:text-gray-100"
+              className="mt-1 overflow-x-auto rounded bg-site-secondary p-3 text-sm text-site-ink focus-visible:outline-site-ink dark:bg-site-ink dark:text-site-canvas"
             >
               <code>{command} @geryenkohawsen/sen-ui</code>
             </pre>
           </div>
         ))}
       </div>
-      <div className="mt-8 flex flex-wrap gap-4 text-blue-600 [&_a]:hover:underline">
+      <div className="mt-8 flex flex-wrap gap-4 font-semibold text-site-ink [&_a]:underline [&_a]:underline-offset-4">
         <a
           href="https://www.npmjs.com/package/@geryenkohawsen/sen-ui"
           target="_blank"

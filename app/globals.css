@@ -1,26 +1,31 @@
 @import '../styles/index.css';
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme static {
+  --color-site-primary: #6d92c9;
+  --color-site-secondary: #f5efe3;
+  --color-site-accent: #d3ea17;
+  --color-site-highlight: #ea66b7;
+  --color-site-canvas: #f1f3ff;
+  --color-site-ink: #111c32;
+  --color-site-muted: #1b2944;
+  --color-site-link: #202f57;
+  --color-site-line: #abb8d0;
+  --color-site-tint: #d5dff4;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+  background-color: var(--color-site-canvas);
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-site-canvas),
+    var(--color-site-primary)
+  );
+  background-attachment: fixed;
+  color: var(--color-site-ink);
+  accent-color: var(--color-site-link);
+}
+
+::selection {
+  background-color: var(--color-site-highlight);
+  color: var(--color-site-ink);
+}

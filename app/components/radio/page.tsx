@@ -120,31 +120,31 @@ const principles = [
 
 export default function PageRadio() {
   return (
-    <main className="w-full max-w-full overflow-x-hidden px-4 py-16 text-white sm:px-6 lg:px-8">
+    <main className="w-full max-w-full overflow-x-hidden px-4 py-16 sm:px-6 lg:px-8">
       <section className="mx-auto grid max-w-7xl gap-10 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-24">
         <div>
           <h1 className="max-w-6xl text-[clamp(2.8rem,6vw,5.9rem)] leading-[0.94] font-black tracking-normal text-balance">
             One choice from many, no second thoughts.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-site-muted">
             SenRadio is a thin, accessible wrapper over a native radio input. It
             keeps keyboard semantics, focus rings, and form integration for
             free, and adds nothing else.
           </p>
 
-          <div className="mt-9 rounded-2xl border border-white/10 bg-white/[0.045] p-5">
-            <div className="rounded-xl bg-[#f7f5ef] p-5 text-neutral-900">
+          <div className="mt-9 rounded-2xl border border-site-line bg-site-secondary p-5">
+            <div className="rounded-xl bg-site-canvas p-5 text-neutral-900">
               <RadioControlledExample />
             </div>
           </div>
         </div>
 
-        <div className="group relative min-h-[30rem] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40">
+        <div className="group relative min-h-[30rem] overflow-hidden rounded-[2rem] border border-site-line bg-site-primary shadow-2xl shadow-site-ink/20">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-90 mix-blend-luminosity transition-transform duration-700 ease-out group-hover:scale-105"
             style={{ backgroundImage: `url(${pebblesImage})` }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(0,0,0,0.08),rgba(0,0,0,0.84))]" />
+          <div className="absolute inset-0 bg-linear-to-b from-site-ink/85 via-site-ink/35 to-site-ink/55" />
           <div className="relative z-10 flex h-full flex-col justify-end p-7">
             <p className="max-w-sm text-2xl leading-tight font-black text-white">
               Stepping stones — only one foot down at a time.
@@ -154,7 +154,7 @@ export default function PageRadio() {
       </section>
 
       <section className="mx-auto grid max-w-7xl grid-flow-dense gap-4 py-16 md:grid-cols-6 md:py-24">
-        <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-lime-200 text-neutral-950 shadow-2xl shadow-black/30 md:col-span-4">
+        <article className="overflow-hidden rounded-[2rem] border border-site-line bg-site-accent text-neutral-950 shadow-2xl shadow-site-ink/15 md:col-span-4">
           <div className="border-b border-black/10 p-7">
             <h2 className="text-2xl font-black tracking-normal">
               React Hook Form
@@ -169,12 +169,12 @@ export default function PageRadio() {
           </div>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20 md:col-span-2">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10 md:col-span-2">
           <h2 className="text-2xl font-black tracking-normal">Disabled</h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             Show a locked option without removing it from the group.
           </p>
-          <div className="mt-7 space-y-2 rounded-2xl bg-[#f7f5ef] p-5 text-neutral-900">
+          <div className="mt-7 space-y-2 rounded-2xl bg-site-canvas p-5 text-neutral-900">
             <SenRadio
               id="d1"
               name="locked"
@@ -194,31 +194,31 @@ export default function PageRadio() {
           </div>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20 md:col-span-2">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10 md:col-span-2">
           <h2 className="text-2xl font-black tracking-normal">No label</h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             Skip the label prop when a custom layout supplies its own.
           </p>
-          <div className="mt-7 flex items-center gap-4 rounded-2xl bg-[#f7f5ef] p-5 text-neutral-900">
+          <div className="mt-7 flex items-center gap-4 rounded-2xl bg-site-canvas p-5 text-neutral-900">
             <SenRadio id="nl1" name="bare" value="1" readOnly />
             <SenRadio id="nl2" name="bare" value="2" readOnly />
             <SenRadio id="nl3" name="bare" value="3" readOnly />
           </div>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20 md:col-span-2">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10 md:col-span-2">
           <h2 className="text-2xl font-black tracking-normal">
             Accessibility
           </h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             Wrap groups in <code>fieldset</code> with a <code>legend</code>.
             Native arrow-key navigation comes for free.
           </p>
         </article>
 
-        <article className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20 md:col-span-2">
+        <article className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10 md:col-span-2">
           <h2 className="text-2xl font-black tracking-normal">Tip</h2>
-          <p className="mt-3 text-sm leading-6 text-white/58">
+          <p className="mt-3 text-sm leading-6 text-site-muted">
             More than five options? A select probably reads faster.
           </p>
         </article>
@@ -228,31 +228,31 @@ export default function PageRadio() {
         {principles.map(([title, body]) => (
           <article
             key={title}
-            className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20"
+            className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10"
           >
-            <h3 className="text-sm font-black tracking-[0.2em] text-lime-200 uppercase">
+            <h3 className="text-sm font-black tracking-[0.2em] text-site-link uppercase">
               {title}
             </h3>
-            <p className="mt-4 text-sm leading-6 text-white/68">{body}</p>
+            <p className="mt-4 text-sm leading-6 text-site-muted">{body}</p>
           </article>
         ))}
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-4 py-16 md:grid-cols-[0.86fr_1.14fr] md:py-24">
-        <aside className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20">
+        <aside className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10">
           <h2 className="text-2xl font-black tracking-normal">
             Standalone requirements
           </h2>
-          <p className="mt-4 text-sm leading-6 text-white/58">
+          <p className="mt-4 text-sm leading-6 text-site-muted">
             Copy the component into another project for a frictionless radio.
           </p>
 
           <div className="mt-8 space-y-5">
             <div>
-              <h3 className="text-sm font-black tracking-[0.2em] text-white/42 uppercase">
+              <h3 className="text-sm font-black tracking-[0.2em] text-site-muted uppercase">
                 Dependencies
               </h3>
-              <ul className="mt-3 space-y-2 text-sm leading-6 text-white/68">
+              <ul className="mt-3 space-y-2 text-sm leading-6 text-site-muted">
                 <li>React 18 or newer</li>
                 <li>Tailwind CSS classes or equivalent styles</li>
                 <li>TypeScript for the prop types</li>
@@ -260,17 +260,17 @@ export default function PageRadio() {
             </div>
 
             <div>
-              <h3 className="text-sm font-black tracking-[0.2em] text-white/42 uppercase">
+              <h3 className="text-sm font-black tracking-[0.2em] text-site-muted uppercase">
                 Props
               </h3>
               <dl className="mt-3 space-y-3">
                 {props.map(([name, value]) => (
                   <div
                     key={name}
-                    className="rounded-2xl border border-white/10 bg-black/20 p-4"
+                    className="rounded-2xl border border-site-line bg-site-canvas p-4"
                   >
-                    <dt className="font-mono text-xs text-lime-200">{name}</dt>
-                    <dd className="mt-1 text-sm text-white/68">{value}</dd>
+                    <dt className="font-mono text-xs text-site-link">{name}</dt>
+                    <dd className="mt-1 text-sm text-site-muted">{value}</dd>
                   </div>
                 ))}
               </dl>
@@ -278,12 +278,12 @@ export default function PageRadio() {
           </div>
         </aside>
 
-        <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/30">
-          <div className="border-b border-white/10 p-7">
+        <article className="overflow-hidden rounded-[2rem] border border-site-line bg-site-secondary shadow-2xl shadow-site-ink/15">
+          <div className="border-b border-site-line p-7">
             <h2 className="text-2xl font-black tracking-normal">
               Quick usage
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/58">
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-site-muted">
               A controlled radio group — the most common shape for forms.
             </p>
           </div>
@@ -291,8 +291,8 @@ export default function PageRadio() {
             <SenCode code={usageCode} language="tsx" />
           </div>
 
-          <div className="border-t border-white/10 p-7">
-            <h3 className="text-sm font-black tracking-[0.2em] text-white/42 uppercase">
+          <div className="border-t border-site-line p-7">
+            <h3 className="text-sm font-black tracking-[0.2em] text-site-muted uppercase">
               Full standalone implementation
             </h3>
           </div>

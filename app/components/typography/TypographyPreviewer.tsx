@@ -30,7 +30,7 @@ export function TypographyPreviewer() {
       <fieldset className="mb-12 space-y-2">
         <label
           htmlFor={inputId}
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          className="block text-sm font-medium text-site-ink"
         >
           Sample text&nbsp;(updates all previews)
         </label>
@@ -39,7 +39,7 @@ export function TypographyPreviewer() {
           type="text"
           value={sampleText}
           onChange={(e) => setSampleText(e.target.value)}
-          className="w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100"
+          className="w-full rounded border border-site-link bg-site-secondary px-3 py-2 text-sm text-site-ink focus-visible:outline-site-ink"
         />
       </fieldset>
 
@@ -81,7 +81,7 @@ function PreviewBlock({ label, className, sampleText }: PreviewBlockProps) {
   ].join('\n')
 
   return (
-    <div className="border-b border-gray-200 pb-8 dark:border-gray-700">
+    <div className="border-b border-site-ink/30 pb-8">
       {/* Live example */}
       <div className={`${className} mb-2 wrap-anywhere`}>{sampleText}</div>
 
@@ -90,7 +90,7 @@ function PreviewBlock({ label, className, sampleText }: PreviewBlockProps) {
           role="region"
           aria-label={`${label} render snippet`}
           tabIndex={0}
-          className="overflow-x-auto rounded bg-gray-900 py-4 pr-20 pl-4 text-sm text-gray-100"
+          className="overflow-x-auto rounded bg-site-ink py-4 pr-20 pl-4 text-sm text-site-canvas"
         >
           <code>{snippet}</code>
         </pre>

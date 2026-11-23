@@ -81,24 +81,24 @@ const principles = [
 
 export default function PageIcon() {
   return (
-    <main className="w-full max-w-full overflow-x-hidden px-4 py-16 text-white sm:px-6 lg:px-8">
+    <main className="w-full max-w-full overflow-x-hidden px-4 py-16 sm:px-6 lg:px-8">
       <section className="mx-auto grid max-w-7xl gap-10 py-16 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-24">
         <div>
           <h1 className="max-w-6xl text-[clamp(2.8rem,6vw,5.9rem)] leading-[0.94] font-black tracking-normal text-balance">
             Icons drawn at the size they will live.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-site-muted">
             SenIcon renders a single SVG file from /public via next/image. Three
             fixed sizes — 16, 24, 32 — keep the iconography crisp without
             inviting freelance scaling.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-5 rounded-2xl border border-white/10 bg-white/[0.045] p-6">
+          <div className="mt-9 flex flex-wrap items-center gap-5 rounded-2xl border border-site-line bg-site-secondary p-6">
             {iconNames.slice(0, 5).map((n) => (
               <div key={n} className="flex flex-col items-center gap-2">
-                <div className="rounded-xl bg-white/8 p-3">
+                <div className="rounded-xl bg-site-tint p-3">
                   <SenIcon src={`/icons/${n}.svg`} size={24} />
                 </div>
-                <span className="font-mono text-[10px] tracking-[0.18em] text-white/58 uppercase">
+                <span className="font-mono text-[10px] tracking-[0.18em] text-site-muted uppercase">
                   {n}
                 </span>
               </div>
@@ -106,12 +106,12 @@ export default function PageIcon() {
           </div>
         </div>
 
-        <div className="group relative min-h-[30rem] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40">
+        <div className="group relative min-h-[30rem] overflow-hidden rounded-[2rem] border border-site-line bg-site-primary shadow-2xl shadow-site-ink/20">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-90 mix-blend-luminosity transition-transform duration-700 ease-out group-hover:scale-105"
             style={{ backgroundImage: `url(${stoneImage})` }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(0,0,0,0.08),rgba(0,0,0,0.8))]" />
+          <div className="absolute inset-0 bg-linear-to-b from-site-ink/85 via-site-ink/35 to-site-ink/55" />
           <div className="relative z-10 flex h-full flex-col justify-end p-7">
             <p className="max-w-sm text-2xl leading-tight font-black text-white">
               Same shape, three sizes, no fluid scaling.
@@ -126,14 +126,14 @@ export default function PageIcon() {
             <h2 className="text-[clamp(2.3rem,4.6vw,4.4rem)] leading-[0.98] font-black tracking-normal text-balance">
               The library set, every size.
             </h2>
-            <p className="mt-5 max-w-2xl text-sm leading-6 text-white/62">
+            <p className="mt-5 max-w-2xl text-sm leading-6 text-site-muted">
               Each row is one icon at 16, 24, and 32 — pick the size that suits
               the surrounding density.
             </p>
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/30">
+        <div className="overflow-hidden rounded-[2rem] border border-site-line bg-site-secondary shadow-2xl shadow-site-ink/15">
           <div className="grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-3">
             {iconNames.map((name, idx) => (
               <div
@@ -141,27 +141,27 @@ export default function PageIcon() {
                 className={[
                   'flex items-center justify-between gap-6 p-6',
                   idx >= 1 && idx % 2 === 1 ? 'sm:border-l-0' : '',
-                  'lg:border-white/10',
-                  idx >= 3 ? 'border-t border-white/10' : '',
+                  'lg:border-site-line',
+                  idx >= 3 ? 'border-t border-site-line' : '',
                 ]
                   .filter(Boolean)
                   .join(' ')}
               >
                 <div>
-                  <p className="font-mono text-xs tracking-[0.18em] text-lime-200 uppercase">
+                  <p className="font-mono text-xs tracking-[0.18em] text-site-link uppercase">
                     {name}
                   </p>
-                  <p className="mt-2 font-mono text-[10px] text-white/42">
+                  <p className="mt-2 font-mono text-[10px] text-site-muted">
                     /icons/{name}.svg
                   </p>
                 </div>
                 <div className="flex items-end gap-5">
                   {sizes.map((s) => (
                     <div key={s} className="flex flex-col items-center gap-1">
-                      <div className="rounded-lg bg-white/8 p-2">
+                      <div className="rounded-lg bg-site-tint p-2">
                         <SenIcon src={`/icons/${name}.svg`} size={s} />
                       </div>
-                      <span className="font-mono text-[10px] text-white/42">
+                      <span className="font-mono text-[10px] text-site-muted">
                         {s}
                       </span>
                     </div>
@@ -177,61 +177,61 @@ export default function PageIcon() {
         {principles.map(([title, body]) => (
           <article
             key={title}
-            className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20"
+            className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10"
           >
-            <h3 className="text-sm font-black tracking-[0.2em] text-lime-200 uppercase">
+            <h3 className="text-sm font-black tracking-[0.2em] text-site-link uppercase">
               {title}
             </h3>
-            <p className="mt-4 text-sm leading-6 text-white/68">{body}</p>
+            <p className="mt-4 text-sm leading-6 text-site-muted">{body}</p>
           </article>
         ))}
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-4 py-16 md:grid-cols-[0.86fr_1.14fr] md:py-24">
-        <aside className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/20">
+        <aside className="rounded-[2rem] border border-site-line bg-site-secondary p-7 shadow-2xl shadow-site-ink/10">
           <h2 className="text-2xl font-black tracking-normal">
             Adding your own icon
           </h2>
-          <ol className="mt-6 space-y-4 text-sm leading-6 text-white/68">
+          <ol className="mt-6 space-y-4 text-sm leading-6 text-site-muted">
             <li>
-              <span className="mr-2 font-mono text-xs text-lime-200">01</span>
+              <span className="mr-2 font-mono text-xs text-site-link">01</span>
               Drop a square SVG into <code>/public/icons/</code>.
             </li>
             <li>
-              <span className="mr-2 font-mono text-xs text-lime-200">02</span>
+              <span className="mr-2 font-mono text-xs text-site-link">02</span>
               Pass its path to <code>src</code>.
             </li>
             <li>
-              <span className="mr-2 font-mono text-xs text-lime-200">03</span>
+              <span className="mr-2 font-mono text-xs text-site-link">03</span>
               Pick a size — 16 for compact, 24 for default, 32 for hero
               affordances.
             </li>
           </ol>
 
           <div className="mt-8">
-            <h3 className="text-sm font-black tracking-[0.2em] text-white/42 uppercase">
+            <h3 className="text-sm font-black tracking-[0.2em] text-site-muted uppercase">
               Props
             </h3>
             <dl className="mt-3 space-y-3">
               {props.map(([name, value]) => (
                 <div
                   key={name}
-                  className="rounded-2xl border border-white/10 bg-black/20 p-4"
+                  className="rounded-2xl border border-site-line bg-site-canvas p-4"
                 >
-                  <dt className="font-mono text-xs text-lime-200">{name}</dt>
-                  <dd className="mt-1 text-sm text-white/68">{value}</dd>
+                  <dt className="font-mono text-xs text-site-link">{name}</dt>
+                  <dd className="mt-1 text-sm text-site-muted">{value}</dd>
                 </div>
               ))}
             </dl>
           </div>
         </aside>
 
-        <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/30">
-          <div className="border-b border-white/10 p-7">
+        <article className="overflow-hidden rounded-[2rem] border border-site-line bg-site-secondary shadow-2xl shadow-site-ink/15">
+          <div className="border-b border-site-line p-7">
             <h2 className="text-2xl font-black tracking-normal">
               Drop-in usage
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/58">
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-site-muted">
               An icon button — the most common shape, with proper aria-label.
             </p>
           </div>
@@ -239,8 +239,8 @@ export default function PageIcon() {
             <SenCode code={usageCode} language="tsx" />
           </div>
 
-          <div className="border-t border-white/10 p-7">
-            <h3 className="text-sm font-black tracking-[0.2em] text-white/42 uppercase">
+          <div className="border-t border-site-line p-7">
+            <h3 className="text-sm font-black tracking-[0.2em] text-site-muted uppercase">
               Standalone implementation
             </h3>
           </div>

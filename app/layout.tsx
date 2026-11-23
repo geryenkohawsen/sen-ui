@@ -16,21 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          'relative flex min-h-dvh flex-col bg-[#f7f9f4] antialiased',
-          'text-[#141914]'
-        )}
-      >
-        {/* Background visuals (fixed, always visible) */}
-        <div
-          aria-hidden
-          className={cn(
-            'pointer-events-none fixed inset-0 z-[-999]',
-            'bg-[radial-gradient(circle_at_18%_12%,rgba(183,205,188,0.42),transparent_32%),radial-gradient(circle_at_82%_68%,rgba(121,151,166,0.18),transparent_34%),linear-gradient(180deg,#f7f9f4_0%,#eef3eb_100%)]'
-          )}
-        />
-
+      <body className="relative flex min-h-dvh flex-col antialiased">
         <SiteHeader />
         <div
           id="site-content"
