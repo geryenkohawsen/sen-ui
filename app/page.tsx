@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import LandingPage from './LandingPage'
 
 export const metadata: Metadata = {
-  title: 'Sen UI - Calm React components for serious product teams',
+  title: 'SenUI - Human-made interface source',
   description:
-    'Try Sen UI, a lightweight React and Tailwind component library for accessible, polished interfaces.',
+    'SenUI is a calm interface system built around human-checked source, plain HTML, CSS, and JavaScript patterns.',
 }
 
 export default function PageTop() {

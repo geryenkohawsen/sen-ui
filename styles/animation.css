@@ -26,4 +26,20 @@
   .animate-marquee {
     animation: marquee 34s linear infinite;
   }
+
+  @keyframes splashFallback {
+    0%,
+    78% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .animate-splash-fallback {
+    animation: splashFallback 2.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  }
 }

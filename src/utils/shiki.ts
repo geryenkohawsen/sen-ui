@@ -1,14 +1,7 @@
-// /utils/shiki.ts
-
 import { createHighlighterCore } from 'shiki/core'
 import { createJavaScriptRegexEngine } from 'shiki/engine/javascript'
 
-/**
- * Initialize a Shiki highlighter using the JavaScript RegExp engine.
- * This setup includes the 'nord' and 'dark-plus' themes, and supports
- * TypeScript and JavaScript languages.
- */
-export const highlighter = await createHighlighterCore({
+export const highlighterPromise = createHighlighterCore({
   themes: [
     import('@shikijs/themes/catppuccin-macchiato'),
     import('@shikijs/themes/dark-plus'),
