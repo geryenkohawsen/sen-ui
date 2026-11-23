@@ -1,16 +1,16 @@
 'use client'
 
-import { Controller, useForm } from 'react-hook-form'
+import { Controller, useForm, useWatch } from 'react-hook-form'
 import SenRadio from '@/src/components/SenRadio/SenRadio'
 
 type FormValues = { plan: 'free' | 'pro' | 'team' }
 
 export function RadioFormExample() {
-  const { control, handleSubmit, watch } = useForm<FormValues>({
+  const { control, handleSubmit } = useForm<FormValues>({
     defaultValues: { plan: 'free' },
   })
 
-  const current = watch('plan')
+  const current = useWatch({ control, name: 'plan' })
 
   const onSubmit = (data: FormValues) => {
     alert(`Form data:\n${JSON.stringify(data, null, 2)}`)

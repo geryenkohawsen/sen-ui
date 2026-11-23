@@ -1,4 +1,4 @@
-import { highlighter } from '../../utils/shiki'
+import { highlighterPromise } from '../../utils/shiki'
 import type { SenCodeProps } from './props'
 import { SenCodeCopyButton } from './SenCodeCopyButton'
 
@@ -9,7 +9,8 @@ export default async function SenCode({
   maxHeight,
   ...rest
 }: SenCodeProps) {
-  const highlighted = await highlighter.codeToHtml(code, {
+  const highlighter = await highlighterPromise
+  const highlighted = highlighter.codeToHtml(code, {
     lang: language,
     theme,
   })
