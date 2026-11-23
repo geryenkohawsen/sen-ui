@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { SenHeader, SenIcon } from '@/src'
+import SiteHeader from './SiteHeader'
 import { cn } from '@/src/utils/cn'
 
 export const metadata: Metadata = {
@@ -31,45 +31,10 @@ export default function RootLayout({
           )}
         />
 
-        <SenHeader
-          logoSrc="/images/sen-ui-logo.png"
-          logoAlt="SenUI Logo"
-          className={cn(
-            'sticky top-3 z-50 mx-auto mt-3 w-[calc(100%-1.5rem)] max-w-6xl',
-            'rounded-full border border-white/10',
-            'bg-[#f7f9f4]/82 backdrop-blur-2xl backdrop-saturate-150',
-            'shadow-[0_18px_60px_rgba(37,50,38,0.10),inset_0_1px_0_0_rgba(255,255,255,0.82)]',
-            'ring-1 ring-[#141914]/[0.08] ring-inset'
-          )}
-          links={[
-            { label: 'Docs', href: '/docs' },
-            { label: 'Components', href: '/components' },
-            { label: 'Blocks', href: '/blocks' },
-          ]}
-          actions={
-            <div className="flex items-center gap-1">
-              <a
-                href="https://github.com/geryenkohawsen/sen-ui"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub Repository"
-                className="inline-flex items-center justify-center rounded-full p-2 text-[#141914]/70 transition-colors duration-300 hover:bg-[#141914]/8 hover:text-[#141914] focus-visible:ring-2 focus-visible:ring-[#141914]/30 focus-visible:outline-none"
-              >
-                <SenIcon src="/icons/github.svg" size={24} />
-              </a>
-              <a
-                href="https://www.gery.jp/en"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Portfolio Website"
-                className="inline-flex items-center justify-center rounded-full p-2 text-[#141914]/70 transition-colors duration-300 hover:bg-[#141914]/8 hover:text-[#141914] focus-visible:ring-2 focus-visible:ring-[#141914]/30 focus-visible:outline-none"
-              >
-                <SenIcon src="/icons/portfolio.svg" size={24} />
-              </a>
-            </div>
-          }
-        />
+        <SiteHeader />
         <div
+          id="site-content"
+          tabIndex={-1}
           className={cn(
             'flex min-h-0 flex-1 flex-col overflow-y-auto',
             'relative'

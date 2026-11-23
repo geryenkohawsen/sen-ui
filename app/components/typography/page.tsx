@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 /* ------------------------------------------------------------------ */
 export default function TypographyDocsPage() {
   return (
-    <main className="mx-auto max-w-3xl space-y-12 px-4 py-16">
+    <main className="mx-auto w-full max-w-3xl space-y-12 px-4 py-16">
       {/* Intro */}
       <section aria-labelledby="typography-docs-heading">
         <h1 id="typography-docs-heading" className="typography-h1 mb-4">

@@ -1,5 +1,5 @@
 'use client'
-import { SenCode } from '@/src'
+import { SenCodeCopyButton } from '@/src/components/SenCode/SenCodeCopyButton'
 /* ------------------------------------------------------------------ */
 /*  <TypographyPreviewer> – Client wrapper with shared state          */
 /* ------------------------------------------------------------------ */
@@ -76,22 +76,26 @@ interface PreviewBlockProps {
 function PreviewBlock({ label, className, sampleText }: PreviewBlockProps) {
   const snippet = [
     `<div className="${className}">`,
-    `  ${sampleText}`,
+    `  {${JSON.stringify(sampleText)}}`,
     `</div>`,
   ].join('\n')
 
   return (
     <div className="border-b border-gray-200 pb-8 dark:border-gray-700">
       {/* Live example */}
-      <div className={`${className} mb-2`}>{sampleText}</div>
+      <div className={`${className} mb-2 wrap-anywhere`}>{sampleText}</div>
 
-      {/* JSX snippet using SenCode */}
-      <pre
-        aria-label={`${label} render snippet`}
-        className="overflow-x-auto rounded bg-gray-100 p-4 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-200"
-      >
-        <SenCode code={snippet} />
-      </pre>
+      <div className="relative">
+        <pre
+          role="region"
+          aria-label={`${label} render snippet`}
+          tabIndex={0}
+          className="overflow-x-auto rounded bg-gray-900 py-4 pr-20 pl-4 text-sm text-gray-100"
+        >
+          <code>{snippet}</code>
+        </pre>
+        <SenCodeCopyButton code={snippet} />
+      </div>
     </div>
   )
 }
